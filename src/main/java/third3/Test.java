@@ -18,14 +18,11 @@ public class Test {
                 .buildSessionFactory();
 
         try (Session session = factory.getCurrentSession()) {
- /*
+
             session.beginTransaction();
 
             Role adminRole = new Role("Admin");
             Role userRole = new Role("User");
-
-            session.persist(adminRole);
-            session.persist(userRole);
 
             User user = new User("qwe");
 
@@ -37,7 +34,7 @@ public class Test {
             session.getTransaction().commit();
 
 
-
+/*
 
             session.beginTransaction();
 
@@ -47,7 +44,7 @@ public class Test {
 
             session.getTransaction().commit();
 
- */
+
             session.beginTransaction();
 
             Role role = session.find(Role.class, 1);
@@ -56,7 +53,7 @@ public class Test {
 
             session.getTransaction().commit();
 
-
+*/
         } finally {
             factory.close();
         }
